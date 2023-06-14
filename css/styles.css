@@ -1,0 +1,13 @@
+main div.buscador {
+    margin-top: 15px;
+    display: flex;
+    justify-content: center
+}
+
+main form.d-flex {
+    width: 50%;
+}
+
+main div.productos{
+    margin: 30px;
+}
