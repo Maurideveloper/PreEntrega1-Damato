@@ -16,6 +16,8 @@ function consultarProductos () {
     // Se elige y se suma el valor de los productos comprados
     for (let i = 1; i <= cantProductos; i++) {
         productoElegido (i);
+        precioTotal = precioTotal + valorProducto;
+        alert ("El precio del producto numero " + i + " que eligio es de " + valorProducto + " y el valor total de su compra es de " + precioTotal + ". Le faltan " + (cantProductos-i) + " productos");
     }
 
     console.log("El precio total de la compra actualmente es de " + precioTotal);
@@ -106,42 +108,36 @@ function productoElegido (i) {
         switch (elegirProducto) {
             case "1": 
             console.log ("El precio del producto a comprar numero "+ i +" es de 3500 pesos")
-            precioTotal = precioTotal + 3500;
             valorProducto = 3500;
             eleccion = true;
             break;
 
             case "2": 
             console.log ("El precio del producto a comprar numero "+ i +" es de 2200 pesos")
-            precioTotal = precioTotal + 2200;
             valorProducto = 2200;
             eleccion = true;
             break;
 
             case "3": 
             console.log ("El precio del producto a comprar numero "+ i +" es de 2000 pesos")
-            precioTotal = precioTotal + 2000;
             valorProducto = 2000;
             eleccion = true;
             break;
 
             case "4": 
             console.log ("El precio del producto a comprar numero "+ i +" es de 4000 pesos")
-            precioTotal = precioTotal + 4000;
             valorProducto = 4000;
             eleccion = true;
             break;
 
             case "5": 
             console.log ("El precio del producto a comprar numero "+ i +" es de 1000 pesos")
-            precioTotal = precioTotal + 1000;
             valorProducto = 1000;
             eleccion = true;
             break;
 
             case "6": 
             console.log ("El precio del producto a comprar numero "+ i +" es de 1500 pesos")
-            precioTotal = precioTotal + 1500;
             valorProducto = 1500;
             eleccion = true;
             break;
