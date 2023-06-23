@@ -3,13 +3,11 @@ alert ("Si el precio del total de productos comprados supera los 20000 pesos te 
 
 
 // se pide la cantidad de productos
-var cantProductos = parseFloat(prompt("Ingrese la cantidad de productos que desea comprar"));
-var precioTotal = 0;
-var cantProductosGratis = 0;
-var valorProducto = 0;
-var eleccion = true;
-
-consultarProductos ();
+let cantProductos = parseInt(prompt("Ingrese la cantidad de productos que desea comprar"));
+let precioTotal = 0;
+let cantProductosGratis = 0;
+let valorProducto = 0;
+let eleccion = true;
 
 function consultarProductos () {
 
@@ -88,65 +86,57 @@ function productosGratis (x) {
                 }
             }
             
-        } while (eleccion !== true);
+        } while (!eleccion);
     }
 }
 
 function productoElegido (i) {
-    eleccion = true;
 
     //bucle para elegir si o si un producto
     do {
+        eleccion = true;
         let elegirProducto = prompt("Ingrese el numero del producto a elegir (1, 2, 3 ,4 ,5 o 6)");
+        
         if (elegirProducto <= 6 && elegirProducto >= 1) {
             alert ("Eligio el producto " + elegirProducto);
+
+            switch (elegirProducto) {
+                case "1": 
+                valorProducto = 3500;
+                break;
+    
+                case "2": 
+                valorProducto = 2200;
+                break;
+    
+                case "3": 
+                valorProducto = 2000;
+                break;
+    
+                case "4": 
+                valorProducto = 4000;
+                break;
+    
+                case "5": 
+                valorProducto = 1000;
+                break;
+    
+                case "6": 
+                valorProducto = 1500;
+                break;
+            }
+
+            console.log("El precio del producto a comprar numero " + i + " es de " + valorProducto + " pesos");
         }
+
         else {
             alert ("No existe el producto " + elegirProducto);
-        }
-        //bucle para elegir si o si un producto
-        switch (elegirProducto) {
-            case "1": 
-            console.log ("El precio del producto a comprar numero "+ i +" es de 3500 pesos")
-            valorProducto = 3500;
-            eleccion = true;
-            break;
-
-            case "2": 
-            console.log ("El precio del producto a comprar numero "+ i +" es de 2200 pesos")
-            valorProducto = 2200;
-            eleccion = true;
-            break;
-
-            case "3": 
-            console.log ("El precio del producto a comprar numero "+ i +" es de 2000 pesos")
-            valorProducto = 2000;
-            eleccion = true;
-            break;
-
-            case "4": 
-            console.log ("El precio del producto a comprar numero "+ i +" es de 4000 pesos")
-            valorProducto = 4000;
-            eleccion = true;
-            break;
-
-            case "5": 
-            console.log ("El precio del producto a comprar numero "+ i +" es de 1000 pesos")
-            valorProducto = 1000;
-            eleccion = true;
-            break;
-
-            case "6": 
-            console.log ("El precio del producto a comprar numero "+ i +" es de 1500 pesos")
-            valorProducto = 1500;
-            eleccion = true;
-            break;
-
-            default: 
-            console.warn ("No eligio ninguno de nuestros productos")
             eleccion = false;
-            break;
         }
+
+        //bucle para elegir si o si un producto
 
         }while (eleccion !== true);
 }
+
+consultarProductos ();
