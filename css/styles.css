@@ -11,3 +11,9 @@ main form.d-flex {
 main div.productos{
     margin: 30px;
 }
+
+main div.card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

@@ -1,142 +1,172 @@
-alert ("Si la cantidad de productos comprados es superior a 6 podes llevarte un producto con un valor igual o menor a 3000 pesos gratis! En caso de ser superior se le hace un descuento del 15% en el producto");
-alert ("Si el precio del total de productos comprados supera los 20000 pesos te llevas un descuento del 10%!!!");
+/*let boton1 = document.getElementById("botonCompra1")
+let boton2 = document.getElementById("botonCompra2")
+let boton3 = document.getElementById("botonCompra3")
+let boton4 = document.getElementById("botonCompra4")
+let boton5 = document.getElementById("botonCompra5")
+let boton6 = document.getElementById("botonCompra6")
+let finalizar = document.getElementById("finalizarCompra")
+
+// Obtenemos una referencia a los elementos
+let input1 = document.getElementById("valor1");
+let btnDecrementar1 = document.getElementById("decrementar1");
+let btnIncrementar1 = document.getElementById("incrementar1");
+
+let input2 = document.getElementById("valor2");
+let btnDecrementar2 = document.getElementById("decrementar2");
+let btnIncrementar2 = document.getElementById("incrementar2");
+
+let input3 = document.getElementById("valor3");
+let btnDecrementar3 = document.getElementById("decrementar3");
+let btnIncrementar3 = document.getElementById("incrementar3");
+
+let input4 = document.getElementById("valor4");
+let btnDecrementar4 = document.getElementById("decrementar4");
+let btnIncrementar4 = document.getElementById("incrementar4");
+
+let input5 = document.getElementById("valor5");
+let btnDecrementar5 = document.getElementById("decrementar5");
+let btnIncrementar5 = document.getElementById("incrementar5");
+
+let input6 = document.getElementById("valor6");
+let btnDecrementar6 = document.getElementById("decrementar6");
+let btnIncrementar6 = document.getElementById("incrementar6");
 
 
-// se pide la cantidad de productos
-let cantProductos = parseInt(prompt("Ingrese la cantidad de productos que desea comprar"));
-let precioTotal = 0;
-let cantProductosGratis = 0;
-let valorProducto = 0;
-let eleccion = true;
+  
+boton1.addEventListener("click", pedirChocolate)
+boton2.addEventListener("click", respuestaClick) 
+boton3.addEventListener("click", respuestaClick) 
+boton4.addEventListener("click", respuestaClick) 
+boton5.addEventListener("click", respuestaClick) 
+boton6.addEventListener("click", respuestaClick)
+finalizar.addEventListener("click", respuestaClick)  
 
-function consultarProductos () {
 
-    // Se elige y se suma el valor de los productos comprados
-    for (let i = 1; i <= cantProductos; i++) {
-        productoElegido (i);
-        precioTotal = precioTotal + valorProducto;
-        alert ("El precio del producto numero " + i + " que eligio es de " + valorProducto + " y el valor total de su compra es de " + precioTotal + ". Le faltan " + (cantProductos-i) + " productos");
+// Función de manejo de evento para el botón de decrementar
+btnDecrementar1.addEventListener("click", function() {
+  var valorActual = parseInt(input1.value);
+  if (valorActual > 0) {
+    input1.value = valorActual - 1;
+  }
+});
+
+// Función de manejo de evento para el botón de incrementar
+btnIncrementar1.addEventListener("click", function() {
+  var valorActual = parseInt(input1.value);
+  if (valorActual < 20) {
+    input1.value = valorActual + 1;
+  }
+});
+
+// 2 
+
+btnDecrementar2.addEventListener("click", function() {
+    var valorActual = parseInt(input2.value);
+    if (valorActual > 0) {
+      input2.value = valorActual - 1;
     }
-
-    console.log("El precio total de la compra actualmente es de " + precioTotal);
-
-    // se divide por 6 para saber cuantas veces se puede pedir un producto gratis y se redondea para abajo para los casos posteriores
-    cantProductosGratis=Math.floor(cantProductos/6);
-
-
-
-    if (cantProductos > 6) {
-        //esto es para cada valor con resto 0 siendo multiplo de 6 se le cuente ese producto gratis o no, en caso de tener resto 0 se le descontara un producto ya que no supera las 6, es igual a 6. 
-            if (cantProductos%6==0){
-                productosGratis (cantProductosGratis-1);
-            }
-        
-            else {
-                productosGratis (cantProductosGratis);
-            }
+  });
+  
+  // Función de manejo de evento para el botón de incrementar
+  btnIncrementar2.addEventListener("click", function() {
+    var valorActual = parseInt(input2.value);
+    if (valorActual < 20) {
+      input2.value = valorActual + 1;
     }
+  });
 
-    //se verifica si el total supera los 20000 pesos y se aplica el descuento
-    if (precioTotal > 20000) {
-        alert ("El total de su compra supera los 20000 pesos! Se le aplicara un descuento del 10% en su compra")
-        precioTotal = precioTotal * 0.90;
-        console.log("Se aplica le descuento del 10%, el precio total de la compra actualmente es de " + precioTotal);
+  //3
+
+  btnDecrementar3.addEventListener("click", function() {
+    var valorActual = parseInt(input3.value);
+    if (valorActual > 0) {
+      input3.value = valorActual - 1;
     }
-    
-    alert ("El precio total de su compra final es de " + precioTotal)
-    console.log("El precio total de la compra final es de " + precioTotal);
+  });
+  
+  // Función de manejo de evento para el botón de incrementar
+  btnIncrementar3.addEventListener("click", function() {
+    var valorActual = parseInt(input3.value);
+    if (valorActual < 20) {
+      input3.value = valorActual + 1;
+    }
+  });
 
+  //4
+
+  btnDecrementar4.addEventListener("click", function() {
+    var valorActual = parseInt(input4.value);
+    if (valorActual > 0) {
+      input4.value = valorActual - 1;
+    }
+  });
+  
+  // Función de manejo de evento para el botón de incrementar
+  btnIncrementar4.addEventListener("click", function() {
+    var valorActual = parseInt(input4.value);
+    if (valorActual < 20) {
+      input4.value = valorActual + 1;
+    }
+  });
+
+  //5
+
+  btnDecrementar5.addEventListener("click", function() {
+    var valorActual = parseInt(input5.value);
+    if (valorActual > 0) {
+      input5.value = valorActual - 1;
+    }
+  });
+  
+  // Función de manejo de evento para el botón de incrementar
+  btnIncrementar5.addEventListener("click", function() {
+    var valorActual = parseInt(input5.value);
+    if (valorActual < 20) {
+      input5.value = valorActual + 1;
+    }
+  });
+
+  //6
+
+  btnDecrementar6.addEventListener("click", function() {
+    var valorActual = parseInt(input6.value);
+    if (valorActual > 0) {
+      input6.value = valorActual - 1;
+    }
+  });
+  
+  // Función de manejo de evento para el botón de incrementar
+  btnIncrementar6.addEventListener("click", function() {
+    var valorActual = parseInt(input6.value);
+    if (valorActual < 20) {
+      input6.value = valorActual + 1;
+    }
+  });
+  */
+  
+  
+  
+
+const container = document.querySelector('div.productos')
+
+function retornarCardHTML({ imagen, numero, nombre, precio } = producto ) {
+  return `<div class="col">
+            <div class="card">
+              <img src="${imagen}" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">${nombre}</h5>
+                <p class="card-text">Precio del chocolate: ${precio}</p>
+                <h6>Cantidad</h6>
+                <input type="number" id="${numero}" value="0" min="0" max="100" required pattern="[0-100]">
+                <button id="${numero}">🛒Comprar🛒</button>
+              </div>
+            </div>
+          </div>`
 }
 
-function productosGratis (x) {
-    //entran como x la cantidad de productos gratis a reclamar
-    alert ("Puede reclamar " + x + " productos de forma gratuita!")
-    console.log("El reclamo es de " + x + " productos de forma gratuita");
-    for (let i=1; i <= x; i++) {
-        
-        do {
-
-            productoElegido (i);
-
-            //entra el producto en caso de superar los 3000
-            if (valorProducto > 3000) {
-                let elegir = " ";
-                elegir = prompt("Su producto supera los 3000 pesos, se le agregara al total pero con un 15% de descuento en el producto! Desea adquirirlo de todas formas? Escribe 'Si' (en caso de aceptar) o escribe 'No' (en caso de querer pedir otro producto)");
-                
-                //si dice Si se le agrega el valor con el descuento del 15% al total de la compra
-                if (elegir === "Si") {
-                    precioTotal = (valorProducto * 0.85) + precioTotal;
-                    eleccion=true;
-                    console.log("Eligio la respuesta " + elegir);
-                    console.log("La eleccion fue " + eleccion);
-                    console.log("El precio total de la compra actualmente es de " + precioTotal);
-                }
-
-                //si dice No se vuelve a repetir el proceso
-                else if (elegir === "No") {
-                    eleccion=false;
-                    console.log("Eligio la respuesta " + elegir);
-                    console.log("La eleccion fue " + eleccion);
-                }
-                else {
-                    alert ("No eligio de forma correcta! Vuelva a seleccionar el valor del producto")
-                    console.log("No eleigio de forma correcta");
-                    eleccion=false;
-                    console.log("La eleccion fue " + eleccion);
-                }
-            }
-            
-        } while (!eleccion);
-    }
+function cargarProductos(array) {
+  container.innerHTML = ""
+  array.forEach((producto)=> container.innerHTML += retornarCardHTML(producto) )
 }
 
-function productoElegido (i) {
-
-    //bucle para elegir si o si un producto
-    do {
-        eleccion = true;
-        let elegirProducto = prompt("Ingrese el numero del producto a elegir (1, 2, 3 ,4 ,5 o 6)");
-        
-        if (elegirProducto <= 6 && elegirProducto >= 1) {
-            alert ("Eligio el producto " + elegirProducto);
-
-            switch (elegirProducto) {
-                case "1": 
-                valorProducto = 3500;
-                break;
-    
-                case "2": 
-                valorProducto = 2200;
-                break;
-    
-                case "3": 
-                valorProducto = 2000;
-                break;
-    
-                case "4": 
-                valorProducto = 4000;
-                break;
-    
-                case "5": 
-                valorProducto = 1000;
-                break;
-    
-                case "6": 
-                valorProducto = 1500;
-                break;
-            }
-
-            console.log("El precio del producto a comprar numero " + i + " es de " + valorProducto + " pesos");
-        }
-
-        else {
-            alert ("No existe el producto " + elegirProducto);
-            eleccion = false;
-        }
-
-        //bucle para elegir si o si un producto
-
-        }while (eleccion !== true);
-}
-
-consultarProductos ();
+chocolates.length > 0 ? cargarProductos(chocolates) : alert ('No hay carrito')
