@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChocoCross - Carrito</title>
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/styles.css">
+
+    <!-- JS -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="../scripts/variables.js"></script>
+    <script src="../scripts/class.total.js"></script>
+    <script defer src="../scripts/mostrarCarrito.js"></script>
+</head>
+
+<body>
+    <header class="header2">
+        <div class="header2">
+            <h1 id="titulo">🛒 Carrito de compras 🛒</h1>
+            <h1 id="slogan">CHOCO CROSS</h1>
+        </div>
+    </header>
+    <main>
+        <section>
+            <table>
+                <thead>
+                    <tr>
+                        <th id="tablehead">Producto</th>
+                        <th id="tablehead">Descripción</th>
+                        <th id="tablehead">Importe</th>
+                        <th id="tablehead">Cantidad</th>
+                        <th id="tablehead">Subtotal</th>
+                        <th id="tablehead">Quitar</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>Aquí</td>
+                        <td>verás</td>
+                        <td>productos</td>
+                    </tr>
+                </tbody>
+                <tfoot>
+                    <th id="tablefoot">-</th>
+                    <th id="tablefoot">-</th>
+                    <th id="tablefoot">-</th>
+                    <th id="tablefoot">-</th>
+                    <th id="resultado">Total</th>
+                    <th id="tablefoot">-</th>
+                </tfoot>
+            </table>
+            <div class="centrar-div">
+                <button class="button" id="btnComprar">COMPRAR</button>
+            </div>
+        </section>
+        <a href="../index.html">
+            <button>seguir comprando</button>
+        </a>
+    </main>
+</body>
+</html>

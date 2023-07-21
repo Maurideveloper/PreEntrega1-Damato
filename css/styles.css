@@ -1,19 +1,155 @@
-main div.buscador {
-    margin-top: 15px;
+/* Estilos para el header */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #57332c;
     display: flex;
-    justify-content: center
-}
-
-main form.d-flex {
-    width: 50%;
-}
-
-main div.productos{
-    margin: 30px;
-}
-
-main div.card-body {
-    display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-}
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+  }
+  
+  #carrito {
+    display: flex;
+    align-items: center;
+  }
+  
+  #renovarCarrito,
+  #finalizarCompra,
+  #inputSearch {
+    padding: 8px 12px;
+    background-color: #D2691E;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-decoration: none;
+    font-family: Arial, sans-serif;
+  }
+  
+  #renovarCarrito:hover,
+  #finalizarCompra:hover {
+    background-color: #B35A1A;
+  }
+  
+  #inputSearch {
+    border: 1px solid #D2691E;
+    color: #333; /* Color del texto del input */
+    padding-left: 10px; /* Separación del texto del borde izquierdo */
+    width: 200px; /* Ancho del campo de búsqueda */
+  }
+  
+  /* Estilos para el span dentro del carrito */
+  #carrito span {
+    margin-left: 5px; /* Espaciado entre el texto y el número de productos */
+  }
+  
+  /* Otros estilos (opcional) */
+  body {
+    margin: 0;
+    padding-top: 50px;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #F5F5F5;
+  }
+  
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+
+  /* Estilos para el header del carrito */
+.header2 {
+    display: flex;
+    background-color: #57332c;
+    text-align: center;
+    padding: 20px 0;
+    color: #fff;
+  }
+  
+  #titulo {
+    font-size: 32px;
+    margin-bottom: 5px;
+  }
+  
+  #slogan {
+    font-size: 24px;
+    font-weight: normal;
+  }
+  
+  /* Estilos para la tabla del carrito */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  th,
+  td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid #ccc;
+  }
+  
+  thead th {
+    background-color: #57332c;
+    color: #fff;
+  }
+  
+  #resultado {
+    font-weight: bold;
+    font-size: 18px;
+  }
+  
+  /* Estilos para el botón "Comprar" */
+  .button {
+    padding: 12px 24px;
+    background-color: #D2691E;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+  }
+  
+  .button:hover {
+    background-color: #B35A1A;
+  }
+  
+  /* Estilos para el div centrar-div */
+  .centrar-div {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  /* Estilos para el botón "seguir comprando" */
+  main a {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+  }
+  
+  main button {
+    padding: 12px 24px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  main button:hover {
+    background-color: #0056b3;
+  }
