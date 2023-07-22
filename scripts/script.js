@@ -75,7 +75,11 @@ function activarClickEnBotones() {
         
       }
       else (
-        alert("Tiene 0 productos seleccionados, por favor ingrese una cantidad!")
+        Swal.fire({
+          icon: 'error',
+          title: 'Tiene 0 productos seleccionados',
+          text: 'Por favor ingrese una cantidad!',
+        })
       )
     })
   })
