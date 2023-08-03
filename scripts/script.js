@@ -2,6 +2,7 @@ const productosEnCarrito = document.querySelector('span#productosEnCarrito')
 const container = document.querySelector('div.productos')
 const renovarCarrito = document.querySelector('button#renovarCarrito')
 const inputSearch = document.querySelector('input#inputSearch')
+const URL = 'scripts/chocolates.json'
 
 function mostrarTotalProdsEnCarrito() {
   productosEnCarrito.textContent = carrito.length
@@ -91,10 +92,22 @@ inputSearch.addEventListener('search', ()=> {
   cargarProductos(resultado)
 })
 
+async function obtenerChocolates() { // await
+  try {
+      const response = await fetch(URL)
+      const data = await response.json()
+      chocolates.push(...data)
+      cargarProductos(chocolates)
+  } catch (error) {
+      console.error("Se ha producido un error:", error)
+      container.innerHTML = retornarCardError()
+  }
+}
+
 
 
 carrito.length > 0 && mostrarTotalProdsEnCarrito()
-
-chocolates.length > 0 ? cargarProductos(chocolates) : alert ('No tenemos productos cargados actualmente')
+obtenerChocolates()
+//chocolates.length > 0 ? cargarProductos(chocolates) : alert ('No tenemos productos cargados actualmente')
 
 

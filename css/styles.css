@@ -70,11 +70,19 @@
 
   /* Estilos para el header del carrito */
 .header2 {
-    display: flex;
-    background-color: #57332c;
-    text-align: center;
-    padding: 20px 0;
-    color: #fff;
+  display: flex;
+  background-color: rgb(87, 51, 44);
+  text-align: center;
+  padding: 20px 0px;
+  color: rgb(255, 255, 255);
+  justify-content: space-around;
+  align-items: center;
+  }
+
+  .header2 img {
+    margin-top: 20px;
+    width: 305px;
+    height: 264px;
   }
   
   #titulo {
